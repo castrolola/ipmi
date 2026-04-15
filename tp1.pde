@@ -4,12 +4,14 @@ color rojo = color(192, 48, 32);
 color beigeClaro = color(205, 175, 130);
 color beigeOscuro = color(170, 145, 105);
 color negro = color(15, 15, 18);
+color rojoOscuro = color(130, 35, 25);
 color fondo = color(220, 210, 185);
+
 PImage gato;
 
 void setup(){
   size(800,400);
-  gato = loadImage("gato-cubismo.jpeg"); 
+  gato = loadImage("gato.jpeg"); 
   background(205, 198, 171);
   
    
@@ -38,19 +40,20 @@ void draw(){
 }
 
 void cabeza(){
-  fill(rojo);
+  fill(rojoOscuro);
   ellipse(400,100,130, 100);
 }
 
 void orejas(){
   noStroke();
-  fill(rojo);
+  fill(rojoOscuro);
   triangle(460,10,400,50,460,80);
   fill(negro);
   triangle(340,10,340,80,400,50);
 }
 
 void cara(){
+  
   fill(beigeClaro);
   arc(400,89,126,79,radians(180),radians(360),CHORD);
   
@@ -59,12 +62,10 @@ void cara(){
   
   pushMatrix();
   translate(400, 100);
-  fill(negro);   
-  ellipse(28, -10, 45, 30);
-  ellipse(-28, -10, 45, 30);
+    fill(negro);   
+    arc(28, -11, 45, 30, radians(0),radians(180),CHORD);
+    arc(-28, -11, 45, 30,radians(0),radians(180),CHORD);
   popMatrix();
-  
-  
 }
 
 void cuerpo(){
@@ -87,7 +88,7 @@ void cola(){
 }
 
 void nariz(){
-  fill(189, 149, 100);
+  fill(rojo);
   triangle(400,120,390,110,410,110);
 }
 
@@ -98,7 +99,7 @@ void partesCuerpo(){
   fill(negro);
   arc(465,310,120,100,radians(90),radians(270),PIE);
   
-  fill(beigeOscuro);
+  fill(negroAzulado);
   arc(450,313,50,50,radians(90),radians(270),CHORD);
   
   fill(rojo);
