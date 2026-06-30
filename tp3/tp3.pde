@@ -31,7 +31,7 @@ void hacerCuadrantes() {
             //Muevo el punto a el centro del cuadrado para que gire en su propio eje
             translate(cuadranteX + 100, cuadranteY + 100); 
 
-            rotarCuadrante(fila, col, devolverAngulo());
+            rotarCuadrante(fila, col, angulo);
             
             rectMode(CENTER);
             
@@ -117,7 +117,4 @@ void mousePressed(){
 
 void rotarCuadrante(int fila, int col, float angulo) {
     rotate(radians(angulo));
-}
-float devolverAngulo() {
-    return angulo;
 }
